@@ -56,7 +56,7 @@ established clinical pathways.
 
 **Referrals are asynchronous.** A clinician at the receiving hospital reviews each
 referral and may accept or reject it. That takes hours or days. The API does not hold your
-request open — you submit, and you receive
+request open you submit, and you receive
 [webhook events](./reference/webhooks.md) as the referral moves.
 
 **Technical access is not clinical authorisation.** A valid token proves who is calling.
