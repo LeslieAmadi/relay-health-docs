@@ -14,6 +14,7 @@ const config = {
   trailingSlash: false,
 
   onBrokenLinks: 'throw',
+
   markdown: {
     hooks: {
       onBrokenMarkdownLinks: 'warn',
