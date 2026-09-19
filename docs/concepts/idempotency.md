@@ -7,7 +7,7 @@ sidebar_label: Idempotency and retries
 # Idempotency and retries
 
 A referral creates a clinical obligation. Creating the same one twice is not a tidy-up
-problem — it puts a patient on a waiting list twice, and a clinician may review and accept
+problem, it puts a patient on a waiting list twice, and a clinician may review and accept
 both.
 
 This page explains the failure that causes duplicates, and how the API prevents it.
@@ -144,7 +144,7 @@ new referral.
 
 ## What is idempotent without a key
 
-Safe to repeat by their nature — no key required:
+Safe to repeat by their nature, no key required:
 
 | Operation | Why |
 |---|---|
@@ -222,8 +222,8 @@ into a rate limit.
 
 ## Related
 
-- [Handling failed referrals](../guides/handling-failed-referrals.md) — recovering when
+- [Handling failed referrals](../guides/handling-failed-referrals.md), recovering when
   you do not know a referral's state
-- [Verifying webhook signatures](../guides/verifying-webhooks.md) — confirming a delivery
+- [Verifying webhook signatures](../guides/verifying-webhooks.md), confirming a delivery
   is genuine before you process it
-- [Referrals](../reference/referrals.md) — the create endpoint and its errors
+- [Referrals](../reference/referrals.md), the create endpoint and its errors

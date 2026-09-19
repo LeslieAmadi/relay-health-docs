@@ -17,7 +17,7 @@ you would make in production.
 
 You need:
 
-- Sandbox client credentials — a `client_id` and `client_secret` from your integration
+- Sandbox client credentials, a `client_id` and `client_secret` from your integration
   dashboard
 - A command line with `curl`
 - A publicly reachable HTTPS URL to receive webhooks. Any request-inspection service or
@@ -116,7 +116,7 @@ curl -X POST https://sandbox.api.relayhealth.example/v1/patients \
 ```
 
 `match.outcome` tells you what happened. `created` means no existing record matched.
-`matched` means your identifier resolved to a patient the API already held — the
+`matched` means your identifier resolved to a patient the API already held, the
 `patient_id` is the same one you had before.
 
 :::warning Ambiguous matches are not resolved for you
@@ -185,7 +185,7 @@ both. The API verifies the practitioner is authorised to act for your organisati
 
 :::note urgent is not emergency
 `urgent` means clinical review should be prioritised. It does not mean immediate. This API
-is not an emergency pathway — a life-threatening case cannot wait for another organisation
+is not an emergency pathway, a life-threatening case cannot wait for another organisation
 to review a referral. Use your established emergency clinical pathways instead.
 :::
 
@@ -260,7 +260,7 @@ curl -X POST https://sandbox.api.relayhealth.example/v1/webhooks \
 }
 ```
 
-Store `signing_secret` now — it is shown once. You need it to verify that deliveries came
+Store `signing_secret` now, it is shown once. You need it to verify that deliveries came
 from the API. See [Verifying webhook signatures](./guides/verifying-webhooks.md).
 
 Within about five seconds the sandbox accepts the referral and delivers:
@@ -346,12 +346,12 @@ the patient, the action and the reason. Retrieve them with `GET /v1/audit-events
 
 ## What next
 
-- [Handling failed referrals](./guides/handling-failed-referrals.md) — rejection,
+- [Handling failed referrals](./guides/handling-failed-referrals.md), rejection,
   timeouts, and what to do when you do not know whether a referral was created
-- [Verifying webhook signatures](./guides/verifying-webhooks.md) — validating deliveries
+- [Verifying webhook signatures](./guides/verifying-webhooks.md), validating deliveries
   and handling duplicates
-- [Matching patients across facilities](./guides/matching-patients.md) — resolving a
+- [Matching patients across facilities](./guides/matching-patients.md), resolving a
   `PATIENT_MATCH_CONFLICT`
-- [The consent model](./concepts/consent-model.md) — why a valid token is not access to a
+- [The consent model](./concepts/consent-model.md), why a valid token is not access to a
   record
-- [Referrals reference](./reference/referrals.md) — every field, status and error
+- [Referrals reference](./reference/referrals.md), every field, status and error

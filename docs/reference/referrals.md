@@ -45,7 +45,7 @@ PENDING ──→ UNDER_REVIEW ──→ ACCEPTED ──→ SCHEDULING ──→
 
 :::note Only two transitions are yours
 You can cancel a referral, and you can update one that is still `PENDING`. Everything else
-is the receiving hospital's decision. Do not poll for changes — subscribe to
+is the receiving hospital's decision. Do not poll for changes, subscribe to
 [webhook events](./webhooks.md).
 :::
 
@@ -186,7 +186,7 @@ you conflate the two.
 
 :::note urgent is not emergency
 `urgent` prioritises clinical review. It does not mean immediate. This API is not an
-emergency pathway — a life-threatening case cannot wait for another organisation to review
+emergency pathway, a life-threatening case cannot wait for another organisation to review
 a referral asynchronously. Use your established emergency clinical pathways.
 :::
 
@@ -377,8 +377,8 @@ Full reference: [Error reference](./errors.md).
 
 ## Related
 
-- [Idempotency and retries](../concepts/idempotency.md) — why every create needs a key
-- [Handling failed referrals](../guides/handling-failed-referrals.md) — rejection,
+- [Idempotency and retries](../concepts/idempotency.md), why every create needs a key
+- [Handling failed referrals](../guides/handling-failed-referrals.md), rejection,
   timeouts and recovery
-- [Webhook events](./webhooks.md) — the events a referral emits
-- [Patients](./patients.md) — creating and matching patients
+- [Webhook events](./webhooks.md), the events a referral emits
+- [Patients](./patients.md), creating and matching patients
