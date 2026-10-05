@@ -29,6 +29,14 @@ const sidebars = {
     },
     {
       type: 'category',
+      label: 'Deployment',
+      collapsed: false,
+      items: [
+        'deployment/gateway-deployment',
+      ],
+    },
+    {
+      type: 'category',
       label: 'Concepts',
       collapsed: true,
       items: [
